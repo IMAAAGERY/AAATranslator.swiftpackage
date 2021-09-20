@@ -12,7 +12,7 @@ Exemple : [ici](https://github.com/IMAAAGERY/AAATranslator.swiftpackage/blob/mas
 
 ### Setup 
 
-```
+```swift
 import SwiftUI
 import AAATranslator
 let translator : AAATranslator = {
@@ -40,7 +40,7 @@ struct AAATranslatorAppApp: App {
 
 ### In your view
 
-```
+```swift
 import SwiftUI
 import AAATranslator
 struct ContentView: View {
