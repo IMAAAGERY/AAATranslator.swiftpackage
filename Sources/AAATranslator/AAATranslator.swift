@@ -1,3 +1,4 @@
-struct AAATranslator {
-    var text = "Hello, World!"
+public struct AAATranslator {
+    public var text = "Hello, World!"
+    
 }
