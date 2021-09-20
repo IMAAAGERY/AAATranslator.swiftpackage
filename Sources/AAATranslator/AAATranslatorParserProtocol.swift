@@ -42,7 +42,4 @@ public struct AAATranslatorParserDefault : AAATranslatorParser {
     public func keys() -> [String] {
         return Array(files.keys)
     }
-
-    
-    
 }
