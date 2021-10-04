@@ -31,11 +31,19 @@ public struct AAATranslatorParserDefault : AAATranslatorParser {
         }
         
         guard let jsonData = try? Data(contentsOf: url),
-              let items = try? JSONDecoder().decode([String:String].self, from: jsonData)
+              let items = try? JSONDecoder().decode([String:[String:String]].self, from: jsonData)
         else {
             throw AAATranslatorParserError.invalidFile
         }
-        return items
+        var flatTab : [String:String] = [:]
+        for view in items.keys{
+            if let tokens = items[view]{
+                for token in tokens{
+                    flatTab["\(view).\(token.key)"] = token.value
+                }
+            }
+        }
+        return flatTab
         
     }
     
