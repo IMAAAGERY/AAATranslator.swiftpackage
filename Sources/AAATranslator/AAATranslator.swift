@@ -8,7 +8,6 @@ public class AAATranslator : ObservableObject {
     }
     
     public func get(_ key:String) -> String {
-        print("Called")
         return data[key] ?? "__NO VALUE FOR \(key)__"
     }
     
